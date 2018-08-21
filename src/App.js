@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Toggle from './components/ToggleRPC'
 import './App.css';
-import Portal from './components/Portal';
-import Modal from './components/Modal';
+import {Toggle, Modal} from './components/utilities';
+
 
 class App extends Component {
   render() {
