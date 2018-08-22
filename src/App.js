@@ -1,8 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, createContext } from 'react';
 import './App.css';
 import { Toggle } from 'components/utilities';
 import { Modal } from 'components/elements';
 
+const UserContext = createContext();
 
 class App extends Component {
   render() {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Icon from 'components/elements/Icon';
 import { Card } from 'components/elements/Cards';
-import { Portal } from 'components/utilities';
+import { Portal, absolute } from 'components/utilities';
 
 class Modal extends Component {
   render() {
@@ -18,7 +18,6 @@ class Modal extends Component {
               <div>
                 {children}
               </div>
-
             </ModalCard>
             <Background onClick={toggle} />
           </ModalWrapper>
@@ -29,9 +28,7 @@ class Modal extends Component {
 }
 
 const ModalWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+  ${absolute({})};
   width: 100%;
   height: 100%;
   display: flex;
@@ -47,18 +44,14 @@ const ModalCard = Card.extend`
 `;
 
 const CloseButton = styled.button`
-  position: absolute;
-  top: 0;
-  right: 0;
+  ${absolute({ x: 'top', y: 'right' })};
   border: none;
   background-color: transparent;
   padding: 10px;
 `;
 
 const Background = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+  ${absolute({ x: 'top', y: 'left' })};
   width: 100%;
   height: 100%;
   background-color: black;
