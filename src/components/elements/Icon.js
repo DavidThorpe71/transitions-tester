@@ -23,6 +23,8 @@ class Icon extends Component {
             />
           </svg>
         )
+      default:
+        return 'test'
     }
   }
 }
